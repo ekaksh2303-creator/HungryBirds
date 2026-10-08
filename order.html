@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation & Status - HungryBirds</title>
+  <meta name="description" content="View your order confirmation, track real-time delivery status, and review receipt on HungryBirds.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="HungryBirds Home">
+          <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+          <span>Hungry<span class="accent">Birds</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li><a href="index.html#offers" class="nav-link">Offers</a></li>
+          <li><a href="restaurants.html?focus=search" class="nav-link">Search</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-label">Cart</span>
+            <span class="cart-count-badge">0</span>
+          </a>
+          <button class="btn btn-secondary btn-sm btn-login" type="button">Login</button>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><button class="btn btn-primary btn-block btn-login" style="margin-top: 0.75rem;">Login / Profile</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Main Content -->
+  <main class="order-page-wrapper">
+    <div class="container" id="orderStatusContainer">
+      <!-- Injected dynamically by order.js -->
+    </div>
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+            <span>Hungry<span class="accent">Birds</span></span>
+          </a>
+          <p>
+            Real-time simulated order timeline and receipt verification. Crafted for College ASDD laboratory assignment.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>ASDD Verification</h4>
+          <ul>
+            <li><span>✓ Order ID Generation</span></li>
+            <li><span>✓ Stage Progression Tracker</span></li>
+            <li><span>✓ LocalStorage Persistence</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Need Assistance?</h4>
+          <ul>
+            <li><span>📞 Helpdesk: 1800-EAT-SOUL</span></li>
+            <li><span>✉️ support@hungrybirds.demo</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HungryBirds Food Delivery. College ASDD Lab Project.</div>
+        <div>Pure Vanilla JavaScript • HTML5 • CSS3</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>

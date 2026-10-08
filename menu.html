@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - HungryBirds</title>
+  <meta name="description" content="Browse restaurant menu items, customized dishes, and order freshly prepared food on HungryBirds.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="HungryBirds Home">
+          <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+          <span>Hungry<span class="accent">Birds</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li><a href="index.html#offers" class="nav-link">Offers</a></li>
+          <li><a href="restaurants.html?focus=search" class="nav-link">Search</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-label">Cart</span>
+            <span class="cart-count-badge">0</span>
+          </a>
+          <button class="btn btn-secondary btn-sm btn-login" type="button">Login</button>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><button class="btn btn-primary btn-block btn-login" style="margin-top: 0.75rem;">Login / Profile</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Restaurant Hero Banner (Injected by menu.js) -->
+  <div id="restaurantBanner" class="restaurant-hero-banner">
+    <!-- Populated dynamically by menu.js based on ?id=X -->
+  </div>
+
+  <!-- Menu Layout -->
+  <main class="container">
+    <div class="menu-filter-bar">
+      <label class="veg-filter-control" for="vegOnlyToggle">
+        <span class="veg-toggle-text">
+          <span class="food-type-icon veg" aria-hidden="true"></span>
+          <span>Veg Only</span>
+        </span>
+        <input type="checkbox" id="vegOnlyToggle" aria-label="Show only vegetarian dishes">
+        <span class="veg-toggle-switch"></span>
+      </label>
+    </div>
+
+    <div class="menu-layout">
+      <!-- Sticky Category Navigation Sidebar -->
+      <aside>
+        <nav class="menu-category-nav" id="menuCategoryNav" aria-label="Menu categories">
+          <!-- Populated by menu.js -->
+        </nav>
+      </aside>
+
+      <!-- Menu Items by Category -->
+      <div id="menuContent">
+        <!-- Populated by menu.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+            <span>Hungry<span class="accent">Birds</span></span>
+          </a>
+          <p>
+            Experience hand-crafted flavors, easy navigation, and seamless mock ordering with HungryBirds.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Back to Restaurants</a></li>
+            <li><a href="cart.html">Check Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Order Safety</h4>
+          <ul>
+            <li><span>✓ Sealed Packaging</span></li>
+            <li><span>✓ Daily Temperature Checks</span></li>
+            <li><span>✓ 100% Contactless Delivery</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Support</h4>
+          <ul>
+            <li><span>📞 Helpdesk: 1800-EAT-SOUL</span></li>
+            <li><span>✉️ support@hungrybirds.demo</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HungryBirds Food Delivery. College ASDD Lab Project.</div>
+        <div>Built with pure HTML5, CSS3 & JavaScript</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

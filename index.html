@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HungryBirds - Modern Food Delivery | Good Food. Good Mood.</title>
+  <meta name="description" content="Discover delicious food from curated local restaurants and artisanal kitchens with HungryBirds. Fast, fresh, and hassle-free food delivery.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="HungryBirds Home">
+          <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+          <span>Hungry<span class="accent">Birds</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li><a href="index.html#offers" class="nav-link">Offers</a></li>
+          <li><a href="restaurants.html?focus=search" class="nav-link">Search</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-label">Cart</span>
+            <span class="cart-count-badge">0</span>
+          </a>
+          <button class="btn btn-secondary btn-sm btn-login" type="button">Login</button>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><button class="btn btn-primary btn-block btn-login" style="margin-top: 0.75rem;">Login / Profile</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="hero-headline">
+              Good food. <br>
+              <span class="highlight">Good mood.</span>
+            </h1>
+            <p class="hero-subtitle">
+              Discover delicious food from restaurants around you, all in one place. Freshly prepared, responsibly packed, and delivered right on time.
+            </p>
+
+            <!-- Search Field -->
+            <form action="restaurants.html" method="GET" class="hero-search-box">
+              <span style="font-size: 1.1rem; color: var(--text-muted); margin-right: 0.5rem;">🔍</span>
+              <input type="text" name="search" placeholder="Search pizza, biryani, burgers, or restaurants..." aria-label="Search restaurants or food items">
+              <button type="submit" class="btn btn-primary btn-sm">Find Food</button>
+            </form>
+
+            <div class="hero-quick-tags">
+              <span>Popular searches:</span>
+              <a href="restaurants.html?category=Pizza" class="quick-tag-chip">Pizza</a>
+              <a href="restaurants.html?category=Indian" class="quick-tag-chip">Biryani</a>
+              <a href="restaurants.html?category=Burgers" class="quick-tag-chip">Burgers</a>
+              <a href="restaurants.html?category=Healthy" class="quick-tag-chip">Healthy Bowls</a>
+            </div>
+          </div>
+
+          <div class="hero-visual-card">
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Delicious gourmet meal platter">
+            </div>
+
+            <div class="hero-floating-badge badge-top-left">
+              <div class="badge-icon-box">⚡</div>
+              <div>
+                <strong style="font-size: 0.9rem; display: block;">Superfast Delivery</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Avg. 25–30 mins</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge badge-bottom-right">
+              <div class="badge-icon-box">⭐</div>
+              <div>
+                <strong style="font-size: 0.9rem; display: block;">4.8+ Top Rated</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Handpicked Kitchens</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Categories Section -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What are you craving?</h2>
+          <p class="section-subtitle">Browse curated culinary categories to satisfy your current mood.</p>
+        </div>
+
+        <div class="categories-grid" id="categoriesGrid">
+          <!-- Dynamically populated or rendered static -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Restaurants Section -->
+    <section class="restaurants-section">
+      <div class="container">
+        <div class="section-header" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 class="section-title">Popular near you</h2>
+            <p class="section-subtitle">Top chefs, local icons, and artisanal kitchens in your neighborhood.</p>
+          </div>
+          <a href="restaurants.html" class="btn btn-secondary btn-sm">View All Restaurants →</a>
+        </div>
+
+        <div class="restaurants-grid" id="featuredRestaurantsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotional Section -->
+    <section class="promo-section" id="offers">
+      <div class="container">
+        <div class="promo-card">
+          <div class="promo-content">
+            <span class="badge-offer" style="margin-bottom: 1rem; display: inline-flex;">SPECIAL COLLEGE OFFER</span>
+            <h3>Hungry? We've got something for you.</h3>
+            <p>
+              Get up to 40% off on selected restaurants with code <code>HUNGRYBIRDS40</code>. Free contactless delivery on all orders above ₹500.
+            </p>
+            <div class="promo-coupon-pill">
+              <span>Use Coupon:</span>
+              <code>HUNGRYBIRDS40</code>
+            </div>
+            <div>
+              <a href="restaurants.html" class="btn btn-primary btn-lg">Explore offers →</a>
+            </div>
+          </div>
+          <div class="promo-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Special dining dishes">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+            <span>Hungry<span class="accent">Birds</span></span>
+          </a>
+          <p>
+            HungryBirds brings together the finest kitchens, heartfelt recipes, and swift deliveries. Designed for the ASDD (Agile Software Development and Design) Laboratory Assignment.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="restaurants.html">All Restaurants</a></li>
+            <li><a href="restaurants.html?category=Pizza">Pizza Places</a></li>
+            <li><a href="restaurants.html?category=Burgers">Burger Joints</a></li>
+            <li><a href="restaurants.html?category=Indian">Biryani & Mughlai</a></li>
+            <li><a href="restaurants.html?category=Healthy">Healthy Bowls</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support & Lab</h4>
+          <ul>
+            <li><a href="#offers">Active Coupons</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="order.html">Track Order</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('ASDD Lab Project: Vanilla HTML5, CSS3 & JavaScript architecture demonstration.')">About ASDD Project</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul>
+            <li><span>📍 ASDD Campus Lab Demo</span></li>
+            <li><span>📞 +91 98765 43210</span></li>
+            <li><span>✉️ support@hungrybirds.demo</span></li>
+            <li><span style="color: var(--success); font-weight: 600;">● 100% Mock Demo Active</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 HungryBirds Food Delivery. College ASDD Lab Project. All rights reserved.</div>
+        <div>Built with pure HTML5, CSS3 & Vanilla JavaScript. No external frameworks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Homepage category and featured restaurants loader
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render Categories
+      const catGrid = document.getElementById('categoriesGrid');
+      if (catGrid && typeof CATEGORIES !== 'undefined') {
+        catGrid.innerHTML = CATEGORIES.map(cat => `
+          <a href="restaurants.html?category=${encodeURIComponent(cat.filterKey)}" class="category-card">
+            <div class="category-img-box">
+              <img src="${cat.image}" alt="${cat.name}" loading="lazy">
+            </div>
+            <div class="category-title">${cat.name}</div>
+            <div class="category-tagline">${cat.tagline}</div>
+          </a>
+        `).join('');
+      }
+
+      // 2. Render Featured Restaurants (at least 6)
+      const restGrid = document.getElementById('featuredRestaurantsGrid');
+      if (restGrid && typeof RESTAURANTS !== 'undefined') {
+        const featured = RESTAURANTS.slice(0, 6);
+        restGrid.innerHTML = featured.map(rest => `
+          <a href="menu.html?id=${rest.id}" class="restaurant-card">
+            <div class="restaurant-image-box">
+              <img src="${rest.image}" alt="${rest.name}" loading="lazy">
+              ${rest.badge ? `<span class="restaurant-badge-floating">${rest.badge}</span>` : ''}
+              ${rest.offer ? `<span class="restaurant-offer-floating">🏷️ ${rest.offer}</span>` : ''}
+            </div>
+            <div class="restaurant-info">
+              <div class="restaurant-header-row">
+                <h3 class="restaurant-name">${rest.name}</h3>
+                <span class="badge-rating">★ ${rest.rating.toFixed(1)}</span>
+              </div>
+              <p class="restaurant-cuisine">${rest.cuisine} • ${rest.tags.slice(0, 2).join(', ')}</p>
+              <div class="restaurant-meta-row">
+                <span class="restaurant-meta-item">⏱️ ${rest.deliveryTime}</span>
+                <span class="restaurant-meta-item">💳 ${rest.priceRange}</span>
+              </div>
+            </div>
+          </a>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

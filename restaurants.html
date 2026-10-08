@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Restaurants - HungryBirds</title>
+  <meta name="description" content="Explore top-rated restaurants, curated cuisines, and fast delivery options on HungryBirds.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="HungryBirds Home">
+          <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+          <span>Hungry<span class="accent">Birds</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li><a href="index.html#offers" class="nav-link">Offers</a></li>
+          <li><a href="restaurants.html?focus=search" class="nav-link">Search</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-btn" aria-label="View shopping cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-label">Cart</span>
+            <span class="cart-count-badge">0</span>
+          </a>
+          <button class="btn btn-secondary btn-sm btn-login" type="button">Login</button>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><button class="btn btn-primary btn-block btn-login" style="margin-top: 0.75rem;">Login / Profile</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main>
+    <div class="container">
+      <!-- Header Banner -->
+      <section class="page-header">
+        <h1 class="section-title" style="font-size: 2.3rem;">Discover restaurants</h1>
+        <p class="section-subtitle">Find something you'll love from our curated neighborhood kitchens.</p>
+      </section>
+
+      <!-- Search & Category Filters Bar -->
+      <section class="filter-bar">
+        <!-- Category Pills (All, Pizza, Burgers, Indian, Chinese, Desserts, Healthy) -->
+        <div class="category-filter-pills" id="categoryFilterPills" role="tablist" aria-label="Filter by category">
+          <!-- Populated by restaurants.js -->
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="restaurantSearchInput" placeholder="Search restaurant, cuisine, or dish..." aria-label="Search restaurants">
+        </div>
+      </section>
+
+      <!-- Results Count & Sorting -->
+      <div class="results-count-bar">
+        <span id="resultsCount">Loading restaurants...</span>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <label for="restaurantSortSelect" style="font-size: 0.85rem; font-weight: 600;">Sort By:</label>
+          <select id="restaurantSortSelect" style="padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-surface); font-size: 0.85rem;">
+            <option value="featured">Featured Partners</option>
+            <option value="rating">Top Rated (★)</option>
+            <option value="deliveryTime">Fastest Delivery</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Restaurant Grid -->
+      <section style="padding-bottom: 5rem;">
+        <div class="restaurants-grid" id="restaurantsGrid">
+          <!-- Cards populated dynamically by restaurants.js -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="img/logo.png" alt="Logo" class="brand-icon-img" style="height: 32px; width: auto; margin-right: 8px;">
+            <span>Hungry<span class="accent">Birds</span></span>
+          </a>
+          <p>
+            Curated dining experience crafted for college ASDD lab evaluation. Clean code, zero bloat, pure vanilla web stack.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="restaurants.html">All Restaurants</a></li>
+            <li><a href="cart.html">Active Basket</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>ASDD Features</h4>
+          <ul>
+            <li><span>✓ Filter by Cuisines</span></li>
+            <li><span>✓ Real-time Debounced Search</span></li>
+            <li><span>✓ URL Parameter State Sync</span></li>
+            <li><span>✓ LocalStorage Basket</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Support</h4>
+          <ul>
+            <li><span>📍 ASDD Computer Lab</span></li>
+            <li><span>✉️ support@hungrybirds.demo</span></li>
+            <li><span style="color: var(--success); font-weight: 600;">● System Online</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HungryBirds Food Delivery. College ASDD Lab Project.</div>
+        <div>Pure Vanilla JavaScript • HTML5 • CSS3</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/restaurants.js"></script>
+</body>
+</html>
